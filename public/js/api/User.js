@@ -8,8 +8,11 @@ class User {
    * Устанавливает текущего пользователя в
    * локальном хранилище.
    * */
+  static url = "/user" ;
+  
   static setCurrent(user) {
-
+    console.log(JSON.parse(user) )
+    localStorage.setItem('currentUser',  user )
   }
 
   /**
@@ -17,7 +20,7 @@ class User {
    * пользователе из локального хранилища.
    * */
   static unsetCurrent() {
-
+    localStorage.removeItem('currentUser')
   }
 
   /**
@@ -25,7 +28,7 @@ class User {
    * из локального хранилища
    * */
   static current() {
-
+    return localStorage.getItem('currentUser') 
   }
 
   /**
@@ -33,7 +36,17 @@ class User {
    * авторизованном пользователе.
    * */
   static fetch( data, callback = f => f ) {
+    let cloneData = {}
+    cloneData.data = JSON.parse(data)
 
+    console.log(cloneData.data)
+
+    cloneData.method = 'GET'
+    cloneData.url = User.url + "/current"
+    cloneData.responseType = 'json'
+
+    cloneData.callback = callback
+    createRequest( cloneData )
   }
 
   /**
@@ -43,7 +56,15 @@ class User {
    * User.setCurrent.
    * */
   static login( data, callback = f => f ) {
+    let cloneData = {}
+    cloneData.data = data
 
+    cloneData.method = 'POST'
+    cloneData.url = User.url + "/login"
+    cloneData.responseType = 'json'
+
+    cloneData.callback = callback
+    createRequest( cloneData )
   }
 
   /**
@@ -52,8 +73,19 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  static register( data, callback = f => f ) {
+  static register( data, callback = f => f ){
+    
+    let cloneData = {}
+    cloneData.data = data
 
+    cloneData.method = 'POST'
+    cloneData.url = User.url + "/register"
+    cloneData.responseType = 'json'
+
+    cloneData.callback = callback
+    createRequest( cloneData )
+    
+    
   }
 
   /**
@@ -61,6 +93,14 @@ class User {
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
   static logout( data, callback = f => f ) {
+    let cloneData = {}
+    cloneData.data = data
 
+    cloneData.method = 'POST'
+    cloneData.url = User.url + "/logout"
+    cloneData.responseType = 'json'
+
+    cloneData.callback = callback
+    createRequest( cloneData )
   }
 }

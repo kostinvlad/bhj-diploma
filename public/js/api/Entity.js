@@ -9,8 +9,13 @@ class Entity {
    * Это могут быть счета или доходы/расходы
    * (в зависимости от того, что наследуется от Entity)
    * */
+  static url = "" 
+  
   static list( data, callback = f => f ) {
-
+    let cloneData = data;
+    cloneData.url = Entity.url;
+    cloneData.callback = callback
+    return createRequest(cloneData)
   }
 
   /**
@@ -19,7 +24,12 @@ class Entity {
    * что наследуется от Entity)
    * */
   static create( data, callback = f => f ) {
-
+    let cloneData = {};
+    cloneData.data = data
+    cloneData._method = 'PUT';
+    cloneData.callback = callback;
+    cloneData.url = this.url;
+    return createRequest(cloneData)
   }
 
   /**
@@ -28,6 +38,7 @@ class Entity {
    * */
   static get( id = '', data, callback = f => f ) {
 
+    return createRequest(cloneData)
   }
 
   /**

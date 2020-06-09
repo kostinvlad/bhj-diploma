@@ -21,6 +21,10 @@
   display: block;
 }
 
+.modal_active {
+  display: block;
+}
+
 .app_user-logged .menu-item_login,
 .app_user-logged .menu-item_register {
   display: none;

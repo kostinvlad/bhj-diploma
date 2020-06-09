@@ -1,0 +1,428 @@
+{
+  "users": [
+    {
+      "name": "demo",
+      "email": "demo@demo",
+      "password": "demo",
+      "id": "1",
+      "isAuthorized": false
+    },
+    {
+      "password": "191",
+      "id": "3ldbgwkazq7sm6",
+      "isAuthorized": false
+    },
+    {
+      "password": "191",
+      "id": "3lda60kazqad56",
+      "isAuthorized": false
+    },
+    {
+      "password": "191",
+      "id": "3ld8kokazqbish",
+      "isAuthorized": false
+    },
+    {
+      "password": "191",
+      "id": "3ld7ekkazqc7ts",
+      "isAuthorized": false
+    },
+    {
+      "email": "ivan@biz.pro",
+      "password": "191",
+      "id": "3ld8rkkazqit7l",
+      "isAuthorized": false
+    },
+    {
+      "email": "ivan5@biz.pro",
+      "password": "191",
+      "id": "3ld5ikkazqou5e",
+      "isAuthorized": false
+    },
+    {
+      "email": "ivan59@biz.pro",
+      "password": "undefined",
+      "id": "3ldblwkazqtcm6",
+      "isAuthorized": false
+    },
+    {
+      "email": "undefined",
+      "password": "undefined",
+      "id": "3ld4xwkb0wqjjn",
+      "isAuthorized": false
+    },
+    {
+      "email": "ivan59@biz.projerg",
+      "password": "3",
+      "id": "3ld984kb0y7h1e",
+      "isAuthorized": false
+    },
+    {
+      "email": "",
+      "password": "3",
+      "id": "3ld7c8kb10622b",
+      "isAuthorized": false
+    },
+    {
+      "email": "email@email.copm",
+      "password": "3",
+      "id": "3ld90wkb12qy6a",
+      "isAuthorized": false
+    },
+    {
+      "email": "mail@mail.copm",
+      "password": "3",
+      "id": "3ld4akkb130ya7",
+      "isAuthorized": false
+    },
+    {
+      "email": "maail@mail.copm",
+      "password": "3",
+      "id": "3ld9zokb13c4ab",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "mal@mail.copm",
+      "password": "3",
+      "id": "3ld7dokb15hqga",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "mal@mil.copm",
+      "password": "3",
+      "id": "3ld2gkkb15judf",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "mal@mil.com",
+      "password": "3",
+      "id": "3ldbmkkb15ker9",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "mal@il.com",
+      "password": "3",
+      "id": "3ldb70kb15o7wn",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "ma@mil.com",
+      "password": "3",
+      "id": "3ld9mgkb1boy29",
+      "isAuthorized": true
+    },
+    {
+      "name": "293",
+      "email": "ma@mi.com",
+      "password": "3",
+      "id": "3ld2tkkb1c2qpx",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@mijl.com",
+      "password": "3",
+      "id": "3ldbtkkb1c51uq",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@mijll.com",
+      "password": "3",
+      "id": "3ld2swkb1cfz26",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@4mijll.com",
+      "password": "3",
+      "id": "3ld8z4kb1cj4ev",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@4mihl.com",
+      "password": "3",
+      "id": "3ld944kb1cqkxz",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@d4mihl.com",
+      "password": "3",
+      "id": "3ldabokb1cyhc7",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mal@d4mihhhl.com",
+      "password": "3",
+      "id": "3ldavgkb1de09n",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mffal@d4mihhhl.com",
+      "password": "3",
+      "id": "3ld4u8kb1do3vs",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "mffal@dhhl.com",
+      "password": "3",
+      "id": "3ld9zckb1drulp",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "a@d4hl.com",
+      "password": "3",
+      "id": "3ld8sokb1e46aa",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "a@d4l.com",
+      "password": "3",
+      "id": "3ldbdwkb1e7kgv",
+      "isAuthorized": true
+    },
+    {
+      "name": "2937",
+      "email": "a@dle.com",
+      "password": "3",
+      "id": "3ld8aokb1ea2de",
+      "isAuthorized": true
+    },
+    {
+      "name": "123",
+      "email": "a@dele.com",
+      "password": "321",
+      "id": "3ld61gkb22bkof",
+      "isAuthorized": true
+    },
+    {
+      "name": "ere576",
+      "email": "ol'dirty@demo.ru",
+      "password": "demo",
+      "id": "3ld3rgkb2hdpx9",
+      "isAuthorized": true
+    },
+    {
+      "name": "23",
+      "email": "ol'dirty@demo.ru2",
+      "password": "demo",
+      "id": "3ld58skb2jf069",
+      "isAuthorized": true
+    },
+    {
+      "name": "1",
+      "email": "ol'di43rty@demo.ru2",
+      "password": "demo",
+      "id": "3ldvskb2mv26n",
+      "isAuthorized": true
+    },
+    {
+      "name": "DKJdk",
+      "email": "ol'di43rty@demo.ru221123",
+      "password": "demo",
+      "id": "3ld34kkb2obdyu",
+      "isAuthorized": true
+    },
+    {
+      "name": "as",
+      "email": "ol'di43rty@demos.ru2",
+      "password": "demo",
+      "id": "3lda5okb2oeeik",
+      "isAuthorized": true
+    },
+    {
+      "name": "1",
+      "email": "1@1",
+      "password": "1",
+      "id": "3ldbgkkb2puv9k",
+      "isAuthorized": true
+    },
+    {
+      "name": "1",
+      "email": "1@12",
+      "password": "1",
+      "id": "3ld3uokb2q2u31",
+      "isAuthorized": true
+    },
+    {
+      "name": "123",
+      "email": "1@123",
+      "password": "123",
+      "id": "3ldaokkb51c5we",
+      "isAuthorized": true
+    },
+    {
+      "name": "3423",
+      "email": "123@123",
+      "password": "123",
+      "id": "3ld9sckb54mgv8",
+      "isAuthorized": true
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Банк",
+      "user_id": "1",
+      "id": "1"
+    },
+    {
+      "name": "Магазин",
+      "user_id": "1",
+      "id": "2"
+    },
+    {
+      "name": "Бизнес",
+      "user_id": "1",
+      "id": "3"
+    }
+  ],
+  "transactions": [
+    {
+      "account_id": "1",
+      "created_at": "2019-09-15 10:24:02",
+      "id": "1",
+      "name": "Кредит",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-17 15:53:02",
+      "id": "2",
+      "name": "Баланс на дебетовке",
+      "sum": 3200,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "1",
+      "created_at": "2019-09-19 20:12:02",
+      "id": "3",
+      "name": "Копилка",
+      "sum": 1500,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 16:23:02",
+      "id": "4",
+      "name": "Молочные продукты",
+      "sum": 100,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "5",
+      "name": "Фрукты",
+      "sum": 250,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-25 15:03:02",
+      "id": "17",
+      "name": "Овощи",
+      "sum": 300,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-26 14:47:02",
+      "id": "6",
+      "name": "Мясо",
+      "sum": 600,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "2",
+      "created_at": "2019-09-27 13:27:02",
+      "id": "7",
+      "name": "Долг в банк",
+      "sum": 5000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "9",
+      "name": "На банду",
+      "sum": 15000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-17 13:27:02",
+      "id": "10",
+      "name": "На стволы",
+      "sum": 6000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-12-27 13:27:02",
+      "id": "11",
+      "name": "Прибыль с банка",
+      "sum": 1500000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "12",
+      "name": "Прибыль с магазина",
+      "sum": 300000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2018-01-15 13:27:02",
+      "id": "13",
+      "name": "Подарок сизого",
+      "sum": 20000,
+      "type": "income",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-09-15 13:27:02",
+      "id": "14",
+      "name": "На охрану",
+      "sum": 60000,
+      "type": "expense",
+      "user_id": "1"
+    },
+    {
+      "account_id": "3",
+      "created_at": "2017-10-15 13:27:02",
+      "id": "15",
+      "name": "На бумер",
+      "sum": 300000,
+      "type": "expense",
+      "user_id": "1"
+    }
+  ]
+}
