@@ -79,112 +79,112 @@
       "email": "maail@mail.copm",
       "password": "3",
       "id": "3ld9zokb13c4ab",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "mal@mail.copm",
       "password": "3",
       "id": "3ld7dokb15hqga",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "mal@mil.copm",
       "password": "3",
       "id": "3ld2gkkb15judf",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "mal@mil.com",
       "password": "3",
       "id": "3ldbmkkb15ker9",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "mal@il.com",
       "password": "3",
       "id": "3ldb70kb15o7wn",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "ma@mil.com",
       "password": "3",
       "id": "3ld9mgkb1boy29",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "293",
       "email": "ma@mi.com",
       "password": "3",
       "id": "3ld2tkkb1c2qpx",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@mijl.com",
       "password": "3",
       "id": "3ldbtkkb1c51uq",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@mijll.com",
       "password": "3",
       "id": "3ld2swkb1cfz26",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@4mijll.com",
       "password": "3",
       "id": "3ld8z4kb1cj4ev",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@4mihl.com",
       "password": "3",
       "id": "3ld944kb1cqkxz",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@d4mihl.com",
       "password": "3",
       "id": "3ldabokb1cyhc7",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mal@d4mihhhl.com",
       "password": "3",
       "id": "3ldavgkb1de09n",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mffal@d4mihhhl.com",
       "password": "3",
       "id": "3ld4u8kb1do3vs",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "mffal@dhhl.com",
       "password": "3",
       "id": "3ld9zckb1drulp",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
       "email": "a@d4hl.com",
       "password": "3",
       "id": "3ld8sokb1e46aa",
-      "isAuthorized": true
+      "isAuthorized": false
     },
     {
       "name": "2937",
@@ -269,6 +269,20 @@
       "password": "123",
       "id": "3ld9sckb54mgv8",
       "isAuthorized": true
+    },
+    {
+      "name": "2",
+      "email": "1234@1234",
+      "password": "1234",
+      "id": "3ld7sckb83agzb",
+      "isAuthorized": true
+    },
+    {
+      "name": "567",
+      "email": "567@567",
+      "password": "567",
+      "id": "3ld3dckber9wp3",
+      "isAuthorized": true
     }
   ],
   "accounts": [
@@ -286,6 +300,21 @@
       "name": "Бизнес",
       "user_id": "1",
       "id": "3"
+    },
+    {
+      "name": "r5",
+      "user_id": "3ld944kb1cqkxz",
+      "id": "3ld3cokbeqwd51"
+    },
+    {
+      "name": "sberbank",
+      "user_id": "3ld944kb1cqkxz",
+      "id": "3ld87okber4yaq"
+    },
+    {
+      "name": "ere",
+      "user_id": "3ldbdwkb1e7kgv",
+      "id": "3ld5q8kbmik7ce"
     }
   ],
   "transactions": [

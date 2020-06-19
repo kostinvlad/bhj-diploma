@@ -1,3 +1,4 @@
+  
 /**
  * Класс Sidebar отвечает за работу боковой колонки:
  * кнопки скрытия/показа колонки в мобильной версии сайта
@@ -18,39 +19,49 @@ class Sidebar {
    * при нажатии на кнопку .sidebar-toggle
    * */
   static initToggleButton() {
-    document.querySelector(".sidebar-toggle").addEventListener('click', (e) => {
-      document.body.classList.toggle('sidebar-open')
-      document.body.classList.toggle('sidebar-collapse')
+      let sidebarMini = document.querySelector('.sidebar-mini');
+      let sidebarToggle = document.querySelector('.sidebar-toggle');
+    sidebarToggle.addEventListener('click', (event) => {
+      event.preventDefault();
+      sidebarMini.classList.toggle('sidebar-open');
+      sidebarMini.classList.toggle('sidebar-collapse');
     })
+
   }
 
   /**
    * При нажатии на кнопку входа, показывает окно входа
    * (через найденное в App.getModal)
-   * При нажатии на кнопку регистрации показывает окно регистрации
+   * При нажатии на кнопку регастрации показывает окно регистрации
    * При нажатии на кнопку выхода вызывает User.logout и по успешному
    * выходу устанавливает App.setState( 'init' )
    * */
   static initAuthLinks() {
-    document.querySelector('.menu-item_login').addEventListener('click', () => {      
-      document.getElementById('modal-login').style.display = "block"
-      
-    })
-    document.querySelector('.menu-item_register').addEventListener('click', () => {      
-      document.getElementById('modal-register').style.display = "block"
-    })
+      let registerBtn = document.querySelector('.menu-item_register a');
+      let loginBtn = document.querySelector('.menu-item_login a');
+      let logoutBtn = document.querySelector('.menu-item_logout a');
+      let registerModal = App.getModal('register');
+      let loginModal = App.getModal('login');
 
-    document.querySelector('.menu-item_logout').addEventListener('click', () => {      
-      User.logout( {} , (err, response) => {
-        if(response.success === true){
-            localStorage.removeItem('currentUser')
-            App.setState( 'init')
-        } else {
-                console.log(err)
-            return false
+    registerBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      registerModal.open();
+    });
+
+    loginBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      loginModal.open();
+    });
+
+    logoutBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      User.logout({}, (err, response) => {
+        if (response && response.success) {
+          App.setState( 'init' );
         }
-      })
-    })
+      });
+
+    });
   }
 
 }

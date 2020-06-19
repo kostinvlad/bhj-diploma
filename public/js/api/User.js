@@ -1,18 +1,17 @@
+
 /**
  * Класс User управляет авторизацией, выходом и
  * регистрацией пользователя из приложения
  * Имеет свойство URL, равное '/user'.
  * */
 class User {
+  static URL = '/user';
   /**
    * Устанавливает текущего пользователя в
    * локальном хранилище.
    * */
-  static url = "/user" ;
-  
   static setCurrent(user) {
-    console.log(JSON.parse(user) )
-    localStorage.setItem('currentUser',  user )
+    localStorage.user = JSON.stringify(user);
   }
 
   /**
@@ -20,7 +19,7 @@ class User {
    * пользователе из локального хранилища.
    * */
   static unsetCurrent() {
-    localStorage.removeItem('currentUser')
+    localStorage.removeItem('user');
   }
 
   /**
@@ -28,7 +27,7 @@ class User {
    * из локального хранилища
    * */
   static current() {
-    return localStorage.getItem('currentUser') 
+    return JSON.parse(localStorage.getItem('user'));
   }
 
   /**
@@ -36,17 +35,17 @@ class User {
    * авторизованном пользователе.
    * */
   static fetch( data, callback = f => f ) {
-    let cloneData = {}
-    cloneData.data = JSON.parse(data)
 
-    console.log(cloneData.data)
-
-    cloneData.method = 'GET'
-    cloneData.url = User.url + "/current"
-    cloneData.responseType = 'json'
-
-    cloneData.callback = callback
-    createRequest( cloneData )
+    return createRequest({data: data, method: 'GET', url: this.URL + '/current', responseType: 'json',
+      callback: (err, response) => {
+        if(response && response.user) {
+          this.setCurrent(response.user);
+        } else {
+          this.unsetCurrent();
+        }
+        callback( err, response );
+      }
+    });
   }
 
   /**
@@ -56,15 +55,14 @@ class User {
    * User.setCurrent.
    * */
   static login( data, callback = f => f ) {
-    let cloneData = {}
-    cloneData.data = data
-
-    cloneData.method = 'POST'
-    cloneData.url = User.url + "/login"
-    cloneData.responseType = 'json'
-
-    cloneData.callback = callback
-    createRequest( cloneData )
+    return createRequest({data, method: 'POST', url: this.URL + '/login', responseType: 'json',
+      callback: (err, response) => {
+        if(response && response.success) {
+          this.setCurrent(response.user);
+        }
+        callback( err, response );
+      }
+    });
   }
 
   /**
@@ -73,19 +71,15 @@ class User {
    * сохранить пользователя через метод
    * User.setCurrent.
    * */
-  static register( data, callback = f => f ){
-    
-    let cloneData = {}
-    cloneData.data = data
-
-    cloneData.method = 'POST'
-    cloneData.url = User.url + "/register"
-    cloneData.responseType = 'json'
-
-    cloneData.callback = callback
-    createRequest( cloneData )
-    
-    
+  static register( data, callback = f => f ) {
+    return createRequest({data, method: 'POST', url: this.URL + '/register', responseType: 'json',
+      callback: (err, response) => {
+        if(response && response.user) {
+          this.setCurrent(response.user);
+        }
+        callback( err, response );
+      }
+    });
   }
 
   /**
@@ -93,14 +87,13 @@ class User {
    * выхода необходимо вызвать метод User.unsetCurrent
    * */
   static logout( data, callback = f => f ) {
-    let cloneData = {}
-    cloneData.data = data
-
-    cloneData.method = 'POST'
-    cloneData.url = User.url + "/logout"
-    cloneData.responseType = 'json'
-
-    cloneData.callback = callback
-    createRequest( cloneData )
+    return createRequest({data, method: 'POST', url: this.URL + '/logout', responseType: 'json',
+      callback: (err, response) => {
+        if(response && response.user) {
+          this.unsetCurrent();
+        }
+        callback( err, response );
+      }
+    });
   }
 }

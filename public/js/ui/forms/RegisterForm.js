@@ -1,9 +1,10 @@
+
 /**
  * Класс RegisterForm управляет формой
  * регистрации
  * Наследуется от AsyncForm
  * */
-class RegisterForm extends AsyncForm{
+class RegisterForm extends AsyncForm {
   /**
    * Производит регистрацию с помощью User.register
    * После успешной регистрации устанавливает
@@ -11,16 +12,15 @@ class RegisterForm extends AsyncForm{
    * и закрывает окно, в котором находится форма
    * */
   onSubmit( options ) {
-    
-    User.register( options , (err, response) => {
-      if(response.success === true){
-          User.setCurrent(JSON.stringify(response.user) )
-          App.setState( 'user-logged')
-          App.modals.register.close()
-      } else {
-              console.log(err)
-          return false
+
+    User.register(options.data, (err, response) => {
+      if (response && response.success) {
+        this.element.reset();
+        App.setState( 'user-logged' );
+        const modalWindow = App.getModal('register');
+        modalWindow.close();
+
       }
-    })
+    });
   }
 }

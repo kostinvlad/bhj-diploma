@@ -2,79 +2,59 @@
  * Основная функция для совершения запросов
  * на сервер.
  * */
-const createRequest = 
+const createRequest = (options = {}) => {
 
-(options = {}) => {
-    
-    
-    if(options.method === 'GET'){            
-        const xhr = new XMLHttpRequest;            
+    let request = new XMLHttpRequest();
+    request.withCredentials = true;
+    request.responseType = options.responseType;
 
-            if(options.url === '/user/current'){
-                if(options.data === null){
-                    xhr.open( 'GET', `${options.url}` );
-                    xhr.withCredentials = true
-                    xhr.responseType = options.responseType
-                    xhr.send();
-                    xhr.onreadystatechange = function() {
-                        if(this.readyState === 4 && this.status === 200){  
-                            let err = this.response.error
-                            let response = this.response           
-                            options.callback(err, response)
-                        }    
-                    }
-                } else {
-                    xhr.open( 'GET', `${options.url}?mail=${options.data.email}&name=${options.data.name}&id=${options.data.id}` );                
-                    xhr.withCredentials = true
-                    xhr.responseType = options.responseType
-                    xhr.send();
-                    xhr.onreadystatechange = function() {
-                        if(this.readyState === 4 && this.status === 200){  
-                            let err = this.response.error
-                            let response = this.response           
-                            options.callback(err, response)
-                        }    
-                    } 
-                }
-                
-
-
-            } else {
-                xhr.open( 'GET', `${options.url}?mail=${options.data.email}&password=${options.data.password}` );                
-                xhr.withCredentials = true
-                xhr.send();
-                xhr.onreadystatechange = function() {
-                    if(this.readyState === 4 && this.status === 200){  
-                        let err = this.response.error
-                        let response = this.response           
-                        options.callback(err, response)
-                    }    
-                } 
+    if (options.method === 'GET') {
+        let url = options.url;
+        if (options.data) {
+            url += '?';
+            let data = options.data;
+            for (let key in data) {
+                url += key + '=' + data[key] + '&';
             }
-   
+            url = url.slice(0,-1);
+        }
+
+        try {
+            if(url) {
+                request.open(options.method, url, true);
+                request.send();
+            }
+        } catch (e) {
+            options.callback( e );
+        }
 
     } else {
-        const xhr = new XMLHttpRequest;
 
-            let formData = new FormData;
-            for(item in options.data){
-                formData.append( item, options.data[item]);                
-            }      
+        let formData = new FormData();
 
-            xhr.open( options.method, options.url );
-            xhr.responseType = options.responseType
-            
-            xhr.withCredentials = true
-            try {
-                xhr.send( formData );
-                xhr.onload = function() {                     
-                        let err = this.response.error
-                        let response = this.response            
-                        options.callback(err, response)    
-                } 
-            }
-            catch (e) {
-                console.error(e)
-            }      
+        for (let key in options.data) {
+            formData.append( key, options.data[key]);
         }
+
+    try {
+
+        request.open(options.method, options.url, true);
+        request.send(formData);
+
+    } catch (e) {
+        options.callback(e);
+    }
+
+    }
+    request.addEventListener('readystatechange', () => {
+
+        if (request.readyState === request.DONE && request.status === 200) {
+            let err = null;
+            let response = request.response;
+            options.callback(err, response);
+        }
+
+    });
+
+    return request;
 };

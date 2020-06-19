@@ -1,5 +1,4 @@
-
-
+  
 /**
  * Класс App управляет всем приложением
  * */
@@ -33,19 +32,8 @@ class App {
    * состояние 'init'
    * */
   static initUser() {
-    User.fetch(User.current(), (err , response) => {
-      this.setState( User.current() ? 'user-logged' : 'init')
-      console.log(typeof response)
-      if(response.success === false){
-        console.error(err)
-      }
-      else {
-        User.setCurrent(JSON.stringify(response.user))
-        
-      }
-    }
-       
-  
+    User.fetch(User.current(), () =>
+      this.setState( User.current() ? 'user-logged' : 'init' )
     );
   }
 
